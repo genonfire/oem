@@ -6,3 +6,5 @@ echo [ upload.c ]
 gcc -o upload.cgi upload.c
 echo [ filelist.c ]
 gcc -o filelist.cgi filelist.c
+echo [ backup.c ]
+gcc -o backup.cgi backup.c
