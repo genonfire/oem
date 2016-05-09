@@ -3,7 +3,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define _MAX_STR 10000
 #ifdef NULL
 #undef NULL
 #endif
@@ -116,11 +115,13 @@ void Convert_String( char *to, const char *from, int len )
 int main()
 {
     char *ContentBuffer;
-    char srcBuffer[ _MAX_STR ];
+    char *srcBuffer;
     int n;
     FILE *fp;
 
     ContentBuffer = GetContent( &n );
+    srcBuffer = (char *)malloc(n+1);
+    memset(srcBuffer, NULL, n+1);
 
 //    Convert_String( srcBuffer, ContentBuffer );
 
@@ -139,6 +140,7 @@ int main()
     }
 
     free( ContentBuffer );
+    free( srcBuffer );
 
     return 0;
 }

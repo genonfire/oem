@@ -4,8 +4,8 @@
 #include <stdlib.h>
 
 #define _ROWS 36
-#define _COLS 100
-#define _MAX_STR 10000
+#define _COLS 80
+#define _MAX_STR 100000
 
 
 void PlusToSpace( char *str )
@@ -19,7 +19,7 @@ void PlusToSpace( char *str )
 
 int main()
 {
-    char str[ _MAX_STR ];
+    char str[ _MAX_STR ] = "";
     int i;
     int ch;
     FILE *stream;

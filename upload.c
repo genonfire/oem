@@ -110,8 +110,8 @@ int main()
     }
     else
     {
-	len = name_end - name_start;
-	strncpy( (char *)filename, name_start, len );
+        len = name_end - name_start;
+        strncpy( (char *)filename, name_start, len );
     }
     
 //    printf( "filename(%s), len(%d)\n", filename, len );
